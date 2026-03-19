@@ -36,6 +36,9 @@ This is a **production-ready AI coding plugin** providing 25 specialized agents,
 | harness-optimizer | Harness config tuning | Reliability, cost, throughput |
 | rust-reviewer | Rust code review | Rust projects |
 | rust-build-resolver | Rust build errors | Rust build failures |
+| ticket-writer | Generate Linear tickets from SSOT docs | Breaking features into implementation tasks |
+| skeleton-builder | Scaffold project structure | New project setup, preparing for ticket-driven dev |
+| feature-implementer | Implement a Linear ticket using TDD, commit, handoff | Ticket ready for implementation |
 
 ## Agent Orchestration
 
@@ -48,6 +51,16 @@ Use agents proactively without user prompt:
 - Multi-channel communication triage → **chief-of-staff**
 - Autonomous loops / loop monitoring → **loop-operator**
 - Harness config reliability and cost → **harness-optimizer**
+
+### Ticket-driven development pipeline
+
+For AI-assisted product development, use this pipeline:
+1. **skeleton-builder** → scaffold the repo from SSOT docs
+2. **ticket-writer** → generate Linear tickets from a feature request
+3. **planner** → plan implementation for a specific ticket
+4. **feature-implementer** → implement, commit, write handoff
+5. **e2e-runner** → test the implementation (reads `.handoff/last-feature.md`)
+6. **code-reviewer** → review before merge
 
 Use parallel execution for independent operations — launch multiple agents simultaneously.
 
